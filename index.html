@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Mi aula digital</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #edf2ff;
+      padding: 30px;
+      color: #202938;
+    }
+
+    main {
+      max-width: 550px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px #cdd6e8;
+    }
+
+    h1 {
+      color: #3046a5;
+      text-align: center;
+    }
+
+    .opcion {
+      display: block;
+      margin: 15px 0;
+    }
+
+    button {
+      background: #3046a5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Mi aula digital</h1>
+    <p>Aprendemos informática jugando.</p>
+
+    <h2>¿Cuántos bits tiene un byte?</h2>
+
+    <label class="opcion">
+      <input type="radio" name="respuesta" value="4">
+      4 bits
+    </label>
+
+    <label class="opcion">
+      <input type="radio" name="respuesta" value="8">
+      8 bits
+    </label>
+
+    <label class="opcion">
+      <input type="radio" name="respuesta" value="16">
+      16 bits
+    </label>
+
+    <button onclick="comprobar()">
+      Comprobar respuesta
+    </button>
+
+    <p id="resultado" aria-live="polite"></p>
+  </main>
+
+  <script>
+    function comprobar() {
+      const seleccion = document.querySelector(
+        'input[name="respuesta"]:checked'
+      );
+      const resultado = document.getElementById('resultado');
+
+      if (!seleccion) {
+        resultado.textContent = 'Selecciona una respuesta.';
+      } else if (seleccion.value === '8') {
+        resultado.textContent = '¡Correcto! Un byte contiene 8 bits.';
+      } else {
+        resultado.textContent = 'Incorrecto. Inténtalo de nuevo.';
+      }
+    }
+  </script>
+</body>
+</html>
+  
