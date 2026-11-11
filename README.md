@@ -6,4 +6,7 @@ Aplicaciones educativas interactivas
 Estoy aprendiendo a utilizar Commit, Push y Pull.
 
 Esta modificación se ha realizado desde mi ordenador.
+
+Este cambio se ha realizado directamente desde GitHub.
+
   
